@@ -40,10 +40,10 @@ Right before acme challenge, copy the acme challenge code and use it on heroku c
 
 ## heroku config && cert upload
 ``` 
-    # config acme challenge
-    heroku config:set ACME_CHALLENGE=<acme-challenge-code> --remote=<env>
-    # switch back to certbot page, hit enter, new cert is updated 
-    sudo bash # as root
-    cd /etc/letsencrypt/live/<env>/
-    heroku certs:update fullchain.pem privkey.pem --remote <env>
+# config acme challenge
+heroku config:set ACME_CHALLENGE=<acme-challenge-code> --remote=<env>
+# switch back to certbot page, hit enter, new cert is updated 
+sudo bash # as root
+cd /etc/letsencrypt/live/<env>/
+heroku certs:update fullchain.pem privkey.pem --remote <env>
 ```
